@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09182b">
+  <meta name="description" content="A Pontual Vidros Modulados — fale conosco pelo WhatsApp ou visite nosso site.">
+  <title>A Pontual Vidros Modulados</title>
+  <style>
+    :root { color-scheme: dark; --navy:#071525; --navy2:#102b48; --red:#ef3038; --blue:#72c9ed; --white:#f8fbff; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; min-height:100%; }
+    body {
+      min-height:100svh; display:grid; place-items:center; overflow-x:hidden;
+      padding:clamp(24px,6vw,56px) 20px calc(24px + env(safe-area-inset-bottom));
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+      color:var(--white);
+      background:
+        radial-gradient(circle at 17% 8%, rgba(114,201,237,.24), transparent 33%),
+        radial-gradient(circle at 86% 87%, rgba(239,48,56,.20), transparent 30%),
+        linear-gradient(145deg,var(--navy) 0%,#0a1d32 52%,var(--navy2) 100%);
+    }
+    body::before {
+      content:""; position:fixed; inset:0; pointer-events:none; opacity:.12;
+      background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+      background-size:44px 44px; mask-image:linear-gradient(to bottom,black,transparent 75%);
+    }
+    main { width:min(100%,440px); text-align:center; position:relative; z-index:1; animation:enter .7s cubic-bezier(.2,.8,.2,1) both; }
+    .mark {
+      width:100%; min-height:182px; display:grid; place-items:center; padding:25px 20px 22px;
+      border:1px solid rgba(255,255,255,.15); border-radius:28px;
+      background:rgba(255,255,255,.95); box-shadow:0 28px 70px rgba(0,0,0,.30), inset 0 1px 0 #fff;
+      backdrop-filter:blur(16px);
+    }
+    .mark img { width:min(100%,350px); height:auto; display:block; }
+    .links { display:grid; gap:14px; margin-top:24px; }
+    .button {
+      min-height:64px; display:flex; align-items:center; justify-content:center; gap:13px;
+      padding:16px 20px; border-radius:18px; text-decoration:none; color:#fff;
+      font-size:1.02rem; font-weight:760; letter-spacing:.01em;
+      border:1px solid rgba(255,255,255,.18); box-shadow:0 14px 32px rgba(0,0,0,.23);
+      transition:transform .2s ease,filter .2s ease,box-shadow .2s ease;
+    }
+    .button svg { width:24px; height:24px; flex:0 0 24px; }
+    .whatsapp { background:linear-gradient(135deg,#23c865,#12a94e); }
+    .website { background:linear-gradient(135deg,#ef3038,#bf1723); }
+    .button:hover { transform:translateY(-2px); filter:brightness(1.06); box-shadow:0 18px 38px rgba(0,0,0,.30); }
+    .button:active { transform:translateY(0) scale(.99); }
+    .button:focus-visible { outline:3px solid var(--blue); outline-offset:4px; }
+    footer { margin-top:22px; color:rgba(255,255,255,.66); font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; }
+    @keyframes enter { from { opacity:0; transform:translateY(14px) scale(.98); } to { opacity:1; transform:none; } }
+    @media (prefers-reduced-motion:reduce) { main { animation:none; } .button { transition:none; } }
+    @media (max-width:380px) { .mark { min-height:156px; border-radius:23px; } .button { min-height:60px; } }
+  </style>
+</head>
+<body>
+  <main aria-label="Links da A Pontual Vidros Modulados">
+    <section class="mark" aria-label="A Pontual Vidros Modulados">
+      <img src="assets/apontual-logo.png" alt="A Pontual Vidros Modulados">
+    </section>
+    <nav class="links" aria-label="Contatos e links">
+      <a class="button whatsapp" href="https://api.whatsapp.com/send/?phone=5531993457680&amp;text=Sua+Mensagem&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="Falar com a A Pontual pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.4 3.6A11.8 11.8 0 0 0 1.9 17.8L.3 23.7l6-1.6a11.8 11.8 0 0 0 5.6 1.4h.1A11.7 11.7 0 0 0 20.4 3.6Z" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 6.7c-.3-.7-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.9 4.5 7.1 6.1 3.5 1.5 4.2 1.2 5 .9.8-.1 2.5-1 2.8-2 .4-1 .4-1.8.3-2-.1-.2-.4-.3-.8-.5l-2.8-1.4c-.4-.1-.7-.2-1 .2l-1.3 1.6c-.2.3-.5.3-.9.1a9.8 9.8 0 0 1-3.3-2c-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8l.6-.7.4-.7c.1-.3.1-.5 0-.7L8.2 6.7Z" fill="currentColor"/></svg>
+        Falar pelo WhatsApp
+      </a>
+      <a class="button website" href="https://apontualvidrosmodulados.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site oficial da A Pontual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3c2.4 2.5 3.7 5.5 3.7 9S14.4 18.5 12 21M12 3C9.6 5.5 8.3 8.5 8.3 12s1.3 6.5 3.7 9"/></svg>
+        Visitar nosso site
+      </a>
+    </nav>
+    <footer>Projetos que valorizam ambientes</footer>
+  </main>
+</body>
+</html>
