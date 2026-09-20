@@ -6,6 +6,20 @@
   <meta name="theme-color" content="#09182b">
   <meta name="description" content="A Pontual Vidros Modulados — fale conosco pelo WhatsApp ou visite nosso site.">
   <title>A Pontual Vidros Modulados</title>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1594057815493123');
+    fbq('track','PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
   <style>
     :root { color-scheme: dark; --navy:#071525; --navy2:#102b48; --red:#ef3038; --blue:#72c9ed; --white:#f8fbff; }
     * { box-sizing: border-box; }
@@ -54,12 +68,14 @@
   </style>
 </head>
 <body>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+    src="https://www.facebook.com/tr?id=1594057815493123&amp;ev=PageView&amp;noscript=1"></noscript>
   <main aria-label="Links da A Pontual Vidros Modulados">
     <section class="mark" aria-label="A Pontual Vidros Modulados">
       <img src="assets/apontual-logo.png" alt="A Pontual Vidros Modulados">
     </section>
     <nav class="links" aria-label="Contatos e links">
-      <a class="button whatsapp" href="https://api.whatsapp.com/send/?phone=5531993457680&amp;text=Sua+Mensagem&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="Falar com a A Pontual pelo WhatsApp">
+      <a class="button whatsapp" id="whatsapp-button" href="https://api.whatsapp.com/send/?phone=5531993457680&amp;text=Sua+Mensagem&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="Falar com a A Pontual pelo WhatsApp">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.4 3.6A11.8 11.8 0 0 0 1.9 17.8L.3 23.7l6-1.6a11.8 11.8 0 0 0 5.6 1.4h.1A11.7 11.7 0 0 0 20.4 3.6Z" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 6.7c-.3-.7-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.9 4.5 7.1 6.1 3.5 1.5 4.2 1.2 5 .9.8-.1 2.5-1 2.8-2 .4-1 .4-1.8.3-2-.1-.2-.4-.3-.8-.5l-2.8-1.4c-.4-.1-.7-.2-1 .2l-1.3 1.6c-.2.3-.5.3-.9.1a9.8 9.8 0 0 1-3.3-2c-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8l.6-.7.4-.7c.1-.3.1-.5 0-.7L8.2 6.7Z" fill="currentColor"/></svg>
         Falar pelo WhatsApp
       </a>
@@ -70,5 +86,15 @@
     </nav>
     <footer>Projetos que valorizam ambientes</footer>
   </main>
+  <script>
+    document.getElementById('whatsapp-button').addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', {
+          content_name: 'whatsapp_button',
+          contact_method: 'WhatsApp'
+        });
+      }
+    });
+  </script>
 </body>
 </html>
